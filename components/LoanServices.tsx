@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { PERSONAL_LOANS, BUSINESS_LOANS } from '../constants';
-import { LoanType } from '../types';
+import { PERSONAL_LOANS, BUSINESS_LOANS } from '../constants.tsx';
+import { LoanType } from '../types.ts';
 
 const ServiceCard: React.FC<{ loan: LoanType }> = ({ loan }) => (
   <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">

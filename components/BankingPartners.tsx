@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PARTNERS } from '../constants';
+import { PARTNERS } from '../constants.tsx';
 
 const BankingPartners: React.FC = () => {
   return (

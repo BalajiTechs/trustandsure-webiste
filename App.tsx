@@ -1,13 +1,13 @@
 
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import LoanServices from './components/LoanServices';
-import EMICalculator from './components/EMICalculator';
-import WhyChooseUs from './components/WhyChooseUs';
-import BankingPartners from './components/BankingPartners';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import LoanServices from './components/LoanServices.tsx';
+import EMICalculator from './components/EMICalculator.tsx';
+import WhyChooseUs from './components/WhyChooseUs.tsx';
+import BankingPartners from './components/BankingPartners.tsx';
+import ContactSection from './components/ContactSection.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   useEffect(() => {
