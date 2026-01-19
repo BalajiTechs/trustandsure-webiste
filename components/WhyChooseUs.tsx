@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FEATURES } from '../constants.tsx';
+import { FEATURES } from '../constants';
 
 const WhyChooseUs: React.FC = () => {
   return (

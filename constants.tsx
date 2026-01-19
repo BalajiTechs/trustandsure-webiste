@@ -15,7 +15,7 @@ import {
   FileText,
   Gem
 } from 'lucide-react';
-import { LoanType, FeatureType, PartnerType } from './types.ts';
+import { LoanType, FeatureType, PartnerType } from './types';
 
 export const PERSONAL_LOANS: LoanType[] = [
   { id: 'personal', title: 'Personal Loan', description: 'Quick funds for salaried & self-employed', icon: <User className="w-8 h-8" />, category: 'personal' },

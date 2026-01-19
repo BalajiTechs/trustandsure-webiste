@@ -1,31 +1,52 @@
 
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import LoanServices from './components/LoanServices.tsx';
-import EMICalculator from './components/EMICalculator.tsx';
-import WhyChooseUs from './components/WhyChooseUs.tsx';
-import BankingPartners from './components/BankingPartners.tsx';
-import ContactSection from './components/ContactSection.tsx';
-import Footer from './components/Footer.tsx';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import LoanServices from './components/LoanServices';
+import EMICalculator from './components/EMICalculator';
+import WhyChooseUs from './components/WhyChooseUs';
+import BankingPartners from './components/BankingPartners';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Add smooth scroll behavior to all anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e: any) {
+    const handleScroll = (e: Event) => {
+      const targetElement = e.currentTarget as HTMLAnchorElement;
+      const href = targetElement.getAttribute('href');
+      
+      // Only proceed if href is a valid fragment identifier (starts with # and has content)
+      if (href && href.startsWith('#') && href.length > 1) {
         e.preventDefault();
-        const href = this.getAttribute('href');
-        if (href) {
+        try {
           const target = document.querySelector(href);
           if (target) {
             target.scrollIntoView({
               behavior: 'smooth'
             });
           }
+        } catch (err) {
+          console.warn('Invalid selector attempted:', href);
         }
-      });
+      } else if (href === '#') {
+        // Handle scrolling to top if href is just '#'
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', handleScroll);
     });
+
+    // Cleanup listeners on unmount
+    return () => {
+      links.forEach(link => {
+        link.removeEventListener('click', handleScroll);
+      });
+    };
   }, []);
 
   return (
