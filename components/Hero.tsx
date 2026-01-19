@@ -1,84 +1,83 @@
 
 import React from 'react';
-import { ChevronRight, ArrowRightCircle } from 'lucide-react';
+import { ChevronRight, Star, ShieldCheck, Zap } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-10 pb-20 md:pt-24 md:pb-32 overflow-hidden gradient-bg">
-      {/* Decorative patterns */}
-      <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
-        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M0 40V.5H40" stroke="#003366" strokeWidth="1" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
-
+    <section className="relative pt-12 pb-24 lg:pt-20 lg:pb-32 urban-gradient overflow-hidden">
+      {/* Decorative Blur */}
+      <div className="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-50"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-3/5 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-1.5 rounded-full text-sm font-bold mb-8">
-              <span className="flex h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></span>
-              Fast-Track Approvals in 24 Hours
-            </div>
-            <h1 className="text-4xl md:text-7xl font-extrabold text-[#003366] leading-[1.1] mb-8">
-              Your Dreams, <br />
-              <span className="text-[#28a745]">Our Responsibility</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Experience hassle-free financial solutions tailored for you. From personal loans to large-scale business funding, we ensure transparency and speed in every step.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
-              <a 
-                href="#enquiry" 
-                className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-[#003366] hover:bg-blue-900 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-blue-200 transition-all transform hover:-translate-y-1"
-              >
-                Apply for Loan
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a 
-                href="#services" 
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white border-2 border-gray-100 hover:border-[#28a745] text-gray-700 px-10 py-5 rounded-2xl font-bold text-lg shadow-md transition-all transform hover:-translate-y-1"
-              >
-                View Schemes
-              </a>
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="lg:w-1/2 text-center lg:text-left animate-slide-up">
+            <div className="inline-flex items-center gap-2 bg-white border border-slate-200 shadow-sm px-4 py-2 rounded-full mb-8">
+              <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+              <span className="text-sm font-bold text-slate-600 tracking-tight">Trusted by 50,000+ Customers</span>
             </div>
             
-            <div className="mt-14 flex flex-wrap items-center justify-center lg:justify-start gap-8 text-sm text-gray-500 font-bold uppercase tracking-wider">
-              <div className="flex items-center gap-2">
-                <ArrowRightCircle className="w-5 h-5 text-green-500" />
-                Low Interest
+            <h1 className="text-5xl lg:text-7xl font-extrabold text-[#002B5B] leading-[1.05] tracking-tight mb-8">
+              Fastest Way To Get <br />
+              <span className="text-[#10B981]">Loan Approval</span>
+            </h1>
+            
+            <p className="text-lg lg:text-xl text-slate-500 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              India's preferred financial marketplace for Personal, Business, and Home loans. Get best rates from 40+ leading banks.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a 
+                href="#enquiry" 
+                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-green-200 transition-all transform hover:-translate-y-1 active:scale-95"
+              >
+                Apply Now
+                <ChevronRight className="w-5 h-5" />
+              </a>
+              <a 
+                href="#calculator" 
+                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white border border-slate-200 text-[#002B5B] px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-sm"
+              >
+                Calculate EMI
+              </a>
+            </div>
+
+            <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-slate-200 pt-10">
+              <div className="flex flex-col items-center lg:items-start">
+                <ShieldCheck className="w-6 h-6 text-[#10B981] mb-2" />
+                <p className="text-sm font-bold text-slate-800">100% Secure</p>
+                <p className="text-xs text-slate-500">Bank-grade safety</p>
               </div>
-              <div className="flex items-center gap-2">
-                <ArrowRightCircle className="w-5 h-5 text-green-500" />
-                No Hidden Charges
+              <div className="flex flex-col items-center lg:items-start border-x border-slate-100 px-4">
+                <Zap className="w-6 h-6 text-[#10B981] mb-2" />
+                <p className="text-sm font-bold text-slate-800">Quick Disbursal</p>
+                <p className="text-xs text-slate-500">Within 24 Hours</p>
               </div>
-              <div className="flex items-center gap-2">
-                <ArrowRightCircle className="w-5 h-5 text-green-500" />
-                Pan-India Service
+              <div className="flex flex-col items-center lg:items-start col-span-2 sm:col-span-1">
+                <div className="flex -space-x-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-blue-500 border-2 border-white"></div>
+                  <div className="w-6 h-6 rounded-full bg-green-500 border-2 border-white"></div>
+                  <div className="w-6 h-6 rounded-full bg-yellow-500 border-2 border-white"></div>
+                </div>
+                <p className="text-sm font-bold text-slate-800">Expert Guidance</p>
+                <p className="text-xs text-slate-500">Dedicated Advisor</p>
               </div>
             </div>
           </div>
           
-          <div className="lg:w-2/5 relative">
-            <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white transform rotate-3 hover:rotate-0 transition-transform duration-700">
-              <img 
-                src="https://images.unsplash.com/photo-1573163060322-373924ad74ce?auto=format&fit=crop&q=80&w=800" 
-                alt="Business success and happiness" 
-                className="w-full h-auto min-h-[500px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#003366]/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-10 left-10 right-10 text-white">
-                <div className="bg-white/20 backdrop-blur-md p-6 rounded-2xl border border-white/30">
-                  <p className="text-3xl font-black mb-1">100% Secure</p>
-                  <p className="text-sm opacity-90 font-medium">Your data and financial journey are in safe hands.</p>
-                </div>
-              </div>
-            </div>
-            {/* Ambient glows */}
-            <div className="absolute -top-12 -right-12 w-64 h-64 bg-green-400/20 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
+          <div className="lg:w-1/2 relative animate-fade-in">
+             <div className="relative rounded-[3rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] border-8 border-white">
+                <img 
+                  src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=1000" 
+                  alt="Customer Support" 
+                  className="w-full h-auto object-cover min-h-[400px]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#002B5B]/40 to-transparent"></div>
+             </div>
+             {/* Floating Badge */}
+             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 hidden sm:block">
+                <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Interest Rates</p>
+                <p className="text-3xl font-black text-[#10B981]">8.45% <span className="text-sm font-medium text-slate-500">p.a*</span></p>
+             </div>
           </div>
         </div>
       </div>
