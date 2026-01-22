@@ -115,8 +115,8 @@ const ContactSection: React.FC = () => {
                 <div>
                   <p className="text-[#10B981] font-bold uppercase tracking-wider text-xs mb-1">Branch Office</p>
                   <p className="text-lg font-medium opacity-90 leading-relaxed">
-                    Nehru colony panch batti Circle <br />
-                    Jodhpur 342011
+                    Defence laboratory road near panch batti Circle <br />
+                    Jodhpur 302011
                   </p>
                 </div>
               </div>

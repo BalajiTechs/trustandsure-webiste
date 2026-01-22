@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex gap-4">
                 <MapPin className="w-5 h-5 text-[#10B981] shrink-0" />
-                <span><strong>Branch:</strong> Nehru colony panch batti Circle, Jodhpur 342011</span>
+                <span><strong>Branch:</strong> Defence laboratory road near panch batti Circle, Jodhpur 302011</span>
               </li>
             </ul>
           </div>

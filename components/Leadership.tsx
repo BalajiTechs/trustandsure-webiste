@@ -16,7 +16,7 @@ const Leadership: React.FC = () => {
           
           <div className="space-y-8">
             <p className="text-2xl lg:text-3xl font-bold text-slate-800 leading-tight max-w-4xl mx-auto">
-              Mr. Ajeet Singh, Founder of Trust and Sure Finserv, brings valuable experience in financial services and loan consulting.
+              Mr. Ajeet Singh Inda, Founder of Trust and Sure Finserv, brings valuable experience in financial services and loan consulting.
             </p>
             <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto font-medium">
               His customer-focused approach and strong banking associations help clients secure the best financial solutions with transparency and confidence. Under his leadership, we have simplified the lending landscape for thousands of individuals and small businesses across Jodhpur.
@@ -24,7 +24,7 @@ const Leadership: React.FC = () => {
           </div>
 
           <div className="mt-16 pt-10 border-t border-slate-200 inline-block px-12">
-            <h4 className="text-2xl font-black text-[#002B5B]">Mr. Ajeet Singh</h4>
+            <h4 className="text-2xl font-black text-[#002B5B]">Mr. Ajeet Singh Inda</h4>
             <p className="text-[#10B981] font-bold uppercase tracking-widest text-xs mt-1">Founder & Managing Director</p>
           </div>
 
