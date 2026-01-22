@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import LoanServices from './components/LoanServices';
 import EMICalculator from './components/EMICalculator';
 import WhyChooseUs from './components/WhyChooseUs';
+import Leadership from './components/Leadership';
 import BankingPartners from './components/BankingPartners';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -16,7 +17,6 @@ const App: React.FC = () => {
       const targetElement = e.currentTarget as HTMLAnchorElement;
       const href = targetElement.getAttribute('href');
       
-      // Only proceed if href is a valid fragment identifier (starts with # and has content)
       if (href && href.startsWith('#') && href.length > 1) {
         e.preventDefault();
         try {
@@ -30,7 +30,6 @@ const App: React.FC = () => {
           console.warn('Invalid selector attempted:', href);
         }
       } else if (href === '#') {
-        // Handle scrolling to top if href is just '#'
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
@@ -41,7 +40,6 @@ const App: React.FC = () => {
       link.addEventListener('click', handleScroll);
     });
 
-    // Cleanup listeners on unmount
     return () => {
       links.forEach(link => {
         link.removeEventListener('click', handleScroll);
@@ -50,13 +48,14 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col selection:bg-green-100 selection:text-green-900">
+    <div className="min-h-screen bg-white flex flex-col selection:bg-green-100 selection:text-green-900">
       <Navbar />
       <main className="flex-grow">
         <Hero />
         <LoanServices />
         <EMICalculator />
         <WhyChooseUs />
+        <Leadership />
         <BankingPartners />
         <ContactSection />
       </main>
@@ -71,7 +70,7 @@ const App: React.FC = () => {
         aria-label="Chat on WhatsApp"
       >
         <span className="absolute right-full mr-3 bg-white text-gray-800 px-4 py-2 rounded-xl text-sm font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-          Chat with an Expert
+          Chat with Mr. Ajeet Singh
         </span>
         <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current">
           <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.853.448-1.273.607-1.446.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298L10.75 10.32c.043.085.087.185.044.271-.137.271-.206.39-.413.629-.087.099-.177.204-.076.377.101.172.446.736.956 1.192.657.587 1.21.769 1.383.855.172.086.274.072.376-.045.101-.116.433-.506.549-.679.116-.173.231-.144.39-.086.158.058 1.011.477 1.184.564.173.087.288.129.332.202.043.073.043.423-.101.827z" />
